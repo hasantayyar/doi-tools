@@ -1,0 +1,23 @@
+{
+    "name": "hasantayyar/doi-tools",
+    "type": "library",
+    "description": "Some doi tools",
+    "keywords": ["doi", "service", "tools"],
+    "license": "LGPL",
+    "authors": [
+        {
+            "name": "Hasan Tayyar BESIK",
+            "email": "tayyar.besik@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+    	"guzzle/guzzle": "3.9.*@dev"
+	},
+    "autoload": {
+        "psr-0": {
+            "Hasantayyar\\DoiTools": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
