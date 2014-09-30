@@ -1,8 +1,7 @@
 #Doi-Tools
-=========
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11915.png)](http://dx.doi.org/10.5281/zenodo.11915)
-
+[![Licence](http://img.shields.io/badge/Licence-LGPL-green.svg)](https://github.com/hasantayyar/doi-tools/blob/master/LICENSE)
 
 **Warning** : This package is still under development. 
 
