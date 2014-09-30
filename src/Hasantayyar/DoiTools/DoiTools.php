@@ -38,4 +38,21 @@ class DoiTools {
         return false;
     }
 
+    /**
+     *  Create a short doi
+     * @param string $doiNumber
+     * @param boolean $returnFullUrl
+     * @return boolean|string  if  an error occured while getting response "false" will be returned
+     */
+    public function shorten($doiNumber, $returnFullUrl = false) {
+        $url = 'http://shortdoi.org/' . urlencode($doiNumber) . '?format=xml';
+        $response = $this->client->get($url);
+        if ($response->getStatusCode() === '200') {
+            $data = $response->json();
+            $shortDoi = $data['ShortDOI'];
+            return $returnFullUrl ? $this->baseUrl . $shortDoi : $shortDoi;
+        }
+        return false;
+    }
+
 }
