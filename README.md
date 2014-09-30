@@ -1,6 +1,9 @@
 #Doi-Tools
 =========
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11915.png)](http://dx.doi.org/10.5281/zenodo.11915)
+
+
 **Warning** : This package is still under development. 
 
 ###Features
