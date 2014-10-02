@@ -9,20 +9,9 @@ use GuzzleHttp\Client;
  * @author Hasan Tayyar BEŞİK <tayyar.besik@gmail.com>
  * @package DoiTools 
  */
-class DoiTools {
+class DoiTools extends ApiClient{
 
     private $baseUrl = 'http://dx.doi.org/';
-    private $client;
-
-//curl -i 'http://dx.doi.org/' -H 'Pragma: no-cache' -H 'Origin: http://dx.doi.org' --data 'hdl=10.1186%2F1752-0509-4-132' 
-
-    public function __construct() {
-        $this->client = new Client(array('defaults' => array('allow_redirects' => false)));
-        $emitter = $this->client->getEmitter();
-        $emitter->on('error', function (ErrorEvent $event) {
-            $event->stopPropagation();
-        });
-    }
 
     /**
      * Check if given doi number registered by returning redirected url or false
