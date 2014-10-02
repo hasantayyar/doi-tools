@@ -11,7 +11,6 @@ class Crossref extends ApiClient{
     private $baseUrl = 'http://dx.doi.org/';
 
     /**
-     * Check if given doi number registered by returning redirected url or false
      * @param string $doiNumber
      * @return boolean|string
      */
