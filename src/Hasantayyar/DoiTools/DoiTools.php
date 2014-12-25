@@ -20,7 +20,7 @@ class DoiTools extends ApiClient{
      */
     public function isReal($doiNumber) {
         $url = $this->baseUrl . $doiNumber;
-        $response = $this->client->get($url);
+        $response = $this->client->get($url, ['timeout' => 2,'connect_timeout'=>2]);
         if ($response->getStatusCode() === '303') {
             return $response->getHeader('Location');
         }
@@ -35,7 +35,7 @@ class DoiTools extends ApiClient{
      */
     public function shorten($doiNumber, $returnFullUrl = false) {
         $url = 'http://shortdoi.org/' . urlencode($doiNumber) . '?format=xml';
-        $response = $this->client->get($url);
+        $response = $this->client->get($url, ['timeout' => 2,'connect_timeout'=>2]);
         if ($response->getStatusCode() === '200') {
             $data = $response->json();
             $shortDoi = $data['ShortDOI'];
